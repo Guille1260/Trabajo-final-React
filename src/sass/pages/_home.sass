@@ -1,0 +1,127 @@
+@use  '../Utilities/_mixins' 
+#Home
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-areas: "carrucel""destacados""categorias""somos""Newsletter"
+    row-gap: 20px
+    .conteiner-carrucel
+        grid-area: carrucel
+        justify-items:  center
+        
+    .conteiner-destacados
+        grid-area: destacados
+        display: grid
+        grid-template-areas: "titulo""tarjetas""boton"
+        row-gap:  10px
+        .conteiner-titulo
+            grid-area: titulo
+            @include mixins.titulox
+            
+        .conteiner-tarjetas
+            grid-area: tarjetas
+            display: grid
+            grid-template-columns: repeat(3,1fr)
+            column-gap: 10px
+            row-gap: 10px
+            @media screen and ( min-width:1023px  )
+                grid-template-columns: repeat(6,1fr)
+                column-gap: 10px
+        .conteiner-boton
+            grid-area: boton
+            text-align: center
+            
+
+
+    .conteiner-categoria
+        grid-area: categorias
+        display: grid
+        grid-template-areas:  "titulo" "cuerpox"
+    
+        row-gap:  10px
+        .conteiner-titulo
+            grid-area: titulo
+            @include mixins.titulox
+        .cuerpo-categorias
+            grid-area: cuerpox
+            margin: 10px 100px
+            display: grid
+            grid-template-columns: repeat(3,1fr)
+            grid-template-rows: 250px 250px
+            column-gap: 10px
+            row-gap: 10px
+            text-align: center
+            img
+                width: 90% 
+                height: 90%
+                margin: auto
+                border: 1px solid black    
+                
+            
+            
+    .conteiner-somos
+        grid-area: somos
+        display: grid
+        grid-template-areas:  "titulo" "cuerpox"
+        row-gap:  10px
+        .conteiner-titulo
+            grid-area: titulo
+            @include mixins.titulox
+        .imagen-texto
+            grid-area: cuerpox
+            display: grid
+            background: #B696A2
+            grid-template-areas: "imagen""text"
+            @media screen and ( min-width: 768px  )
+                grid-template-areas: "imagen text"
+                grid-template-columns: 1fr 1fr
+            .imagen-somos
+                grid-area: imagen
+                text-align: center
+                img
+                    width: 90%
+                    margin: 10px
+                    @media screen and ( min-width: 1023px  )
+                        width: 60%
+            .conteiner-texto
+                grid-area: text
+                display: grid
+                grid-template-areas: "titulo""texto"
+                
+                h2
+                    grid-area: titulo
+                    text-align: center
+                p
+                    grid-area: texto
+                    text-align: center
+                    margin: 10px
+
+
+    .seccion-Newsletter
+        grid-area: Newsletter
+        display: grid
+        grid-template-areas:  "titulo" "cuerpox"
+        row-gap:  10px
+        .conteiner-titulo
+            grid-area: titulo
+            @include mixins.titulox
+        .conteiner-Newsletter
+            grid-area: cuerpox
+            display: grid
+            background: #B696A2
+            grid-template-areas: "uno""dos"
+
+            @media screen and ( min-width: 768px  )
+                
+            .conteiner-titulo-descripccion
+                grid-area: uno
+                text-align: center
+                display: grid
+                grid-template-areas: "titu""texto"
+                h3
+                    grid-area: titu
+                p
+                    grid-area: texto
+                    margin: 5px
+            .conteiner-fromulario
+                grid-area: dos
+                text-align: center

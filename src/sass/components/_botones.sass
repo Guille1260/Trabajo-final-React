@@ -1,0 +1,139 @@
+@use  '../utilities/mixins'
+.btn-equis
+    font-size: 30px
+    color: #fff
+    position: absolute
+    right: 0
+    margin-top: 0px
+    &:hover
+        color: #fff
+
+.conteiner-medio
+    .conteiner-logo
+        .btn-menu
+            @media screen and ( min-width:1023px)
+                display: none
+        .logo
+            @media screen and ( max-width:1023px)
+                display: none
+
+.conteiner-buscador
+    a
+        img
+            border-radius: 10px
+            width: auto
+            height: 60px
+        @media screen and ( min-width:1023px)
+            display: none
+    .conteiner-lupa-barra
+        width: 100%
+        .barra
+            width: 80%
+            border: none
+            outline: none
+            background: none
+            border-bottom:  2px solid
+            color: #D3A3AD
+            width: 80%
+            position: relative
+            &::placeholder
+                text-align: center
+                color: #D3A3AD
+            &:focus
+                color: #fff
+        .lupa
+            color: #fff
+        @media screen and ( max-width:1023px)
+            display: none
+
+.conteiner-usuario
+    a
+        text-decoration: none
+        color: #fff
+        border: 1px solid #D3A3AD
+        padding: 8px
+    i
+        font-size: 20px
+        
+    span
+        margin-left: 5px
+        @media screen and ( max-width:767px)
+            display: none
+
+.btn-carrito
+    color: #fff
+    position: relative
+    font-size: 20px
+    
+    .contador-carrito
+        position: absolute
+        top: 0
+        margin-left: 2px
+
+.btn-menu
+    color: #fff
+.btn-vaciar-carrito
+    color: #fff
+    border: 1px solid #fff
+    margin: 10px
+    text-transform: uppercase
+    i
+        margin: 4px
+    &:hover
+        color: #fff
+        border: 1px solid #080000
+.btn-comprar
+    color: #fff
+    border: 1px solid #fff
+    margin: 10px
+    text-transform: uppercase
+    &:hover
+        color: #fff
+        border: 1px solid #080000
+        
+.correo-new
+    border: none
+    outline: none
+    background: none
+    border-bottom:  2px solid
+    color: #D3A3AD
+    width: 80%
+    position: relative
+    &::placeholder
+        text-align: center
+        color: #D3A3AD
+    &:focus
+        color: #fff
+.correo-new2
+    border: none
+    outline: none
+    background: none
+    border-bottom:  2px solid
+    color: #422976
+    position: relative
+    width: 80%
+    @media screen and ( min-width:1023px  )
+        width: 30%
+        
+    &::placeholder
+        text-align: center
+        color: #422976
+    &:focus
+        color: #fff
+    
+.vermas  
+    width: 200px
+    background: #51262C
+    text-transform: uppercase
+    color: #fff
+    box-shadow: 2px black
+.btn-enviar
+    width: 100px
+    background: #51262C
+    text-transform: uppercase
+    color: #fff
+    box-shadow: 2px black
+
+.btn-carrito
+    border: none
+    

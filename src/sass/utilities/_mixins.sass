@@ -1,0 +1,36 @@
+@mixin centrar
+    justify-content: center
+    justify-items: center
+    align-content: center
+    align-items: center
+    text-align: center
+
+@mixin efecto-link
+    position: relative
+    &::before
+        content: ""
+        border-bottom: 2px solid #fff
+        position: absolute
+        bottom: 4px
+        width: 0%
+        right: 0
+        transition: 0.4s
+    &::after
+        content: ""
+        border-bottom: 2px solid #fff
+        position: absolute
+        bottom: -2px
+        width: 0%
+        left: 0
+        transition: 0.4s
+    &:hover:before
+        width: 70%
+        
+    &:hover:after
+        width: 40%
+
+@mixin titulox
+    text-align: center
+    background: #422976
+    border-bottom: 2px solid black   
+    color: #fff 

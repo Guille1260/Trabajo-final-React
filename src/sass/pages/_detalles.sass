@@ -1,0 +1,36 @@
+#detalles
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-template-areas: "izq der"
+    border: 2px solid #422976
+    .imagen-producto
+        grid-area: izq
+        margin: 10px
+        img
+            width: 90%
+            height: 90%
+    .informacion-producto
+        grid-area: der
+        display: grid
+        grid-template-areas: "navegacion""titulo""precio""cuotasprecio""stock""boton"
+        text-align: center
+        row-gap: 10px
+        text-align: center
+        .conteiner-navegacion
+            grid-area: navegacion
+            border-bottom:  2px solid black
+        .conteiner-titulo-producto
+            grid-area: titulo
+            border-bottom:  2px solid black
+        .conteiner-precio
+            grid-area: precio
+            border-bottom:  2px solid black
+        .conteiner-cuotas-precio
+            grid-area: cuotasprecio
+            border-bottom:  2px solid black
+        .conteiner-stock
+            grid-area: stock
+            border-bottom:  2px solid black
+        .conteiner-boton
+            grid-area: boton
+           

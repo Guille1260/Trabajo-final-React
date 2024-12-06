@@ -1,0 +1,70 @@
+@use  '../Utilities/_mixins' 
+#productos
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-areas: "titulo""cuerpo"
+    row-gap: 10px
+    .conteiner-titulox
+        grid-area: titulo
+        @include mixins.titulox
+    .conteiner-productos
+        grid-area: cuerpo
+        display: grid
+        grid-template-areas: "uno""dos"
+        @media screen and ( min-width:1023px  )
+            grid-template-areas: "uno dos"
+            grid-template-columns: 20% 80%
+            column-gap: 10px
+        .conteiner-filtros
+            grid-area: uno
+            display: grid
+            grid-template-areas: "filtrado""categoria"
+            row-gap: 10px
+            .conteiner-filtros-utilizados
+                grid-area: filtrado
+                display: grid
+                grid-template-areas: "titu""cuer""boton"
+                row-gap: 10px
+                .conteiner-titulo
+                    grid-area: titu
+                    @include mixins.titulox
+                .conteiner-filtro-selecionado
+                    grid-area: cuer
+                    background: pink
+                .conteiner-limpiar
+                    grid-area: boton
+                    text-align: center
+                    background: pink
+                    margin-bottom: 10px
+
+            .conteiner-filtros-categorias
+                grid-area: categoria
+                display: grid
+                grid-template-areas: "t""c"
+                row-gap: 10px
+                .conteiner-titulo
+                    grid-area: t
+                    @include mixins.titulox
+                .conteiner-categorias-filtro
+                    grid-area: c
+                    
+        .conteiner-tarjetas-ordenar
+            grid-area: dos
+            display: grid
+            grid-template-areas: "orden""tarjetas"
+            grid-template-rows: 60px 
+            .conteiner-ordenar
+                grid-area: orden
+            .conteiner-tarjetas
+                grid-area: tarjetas
+                display: grid
+                grid-template-columns: repeat(3,1fr)
+                column-gap: 10px
+                row-gap: 10px
+                @media screen and ( min-width: 767px  )
+                    grid-template-columns: repeat(4,1fr)
+                @media screen and ( min-width: 1023px  )
+                    grid-template-columns: repeat(5,1fr)
+                    
+
+            

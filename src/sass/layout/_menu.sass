@@ -1,0 +1,85 @@
+@use  '../utilities/mixins'
+.conteiner-inferior
+    .conteiner-menu
+        height: 100%
+        .menu
+            height: 100%
+            display: flex
+            list-style: none
+            @include mixins.centrar
+            a
+                margin: 10px
+                text-transform: uppercase
+                text-decoration: none
+                color: #ffffff
+                position: relative
+                
+                &::before
+                    content: ""
+                    border-bottom: 2px solid #FFFFFF
+                    position: absolute
+                    bottom: -5px
+                    width: 0%
+                    right: 0
+                    transition: 0.4s
+                &::after
+                    content: ""
+                    border-bottom: 2px solid #FFFFFF
+                    position: absolute
+                    bottom: 0px
+                    width: 0%
+                    left: 0
+                    transition: 0.4s
+                &:hover:before
+                    width : 70%
+
+                &:hover:after
+                    width: 40%
+        @media screen and ( max-width:1023px  )
+            display: none
+
+    .conteiner-lupa-barra
+        width: 100%
+        .barra
+            border: none
+            outline: none
+            margin: 5px
+            background: none
+            border-bottom:  2px solid
+            color: #D3A3AD
+            width: 80%
+            position: relative
+            &::placeholder
+                text-align: center
+                color: #D3A3AD
+            &:focus
+                color: #fff
+        .lupa
+            display: none
+        @media screen and ( min-width:1023px  )
+            display: none
+
+.conteiner-menu-movil
+    .menu-movil-header
+        background:  #422976
+        color: #fff
+        h5
+            margin-left: 40%
+    .menu-movil-cuerpo
+        background: #B696A2
+        list-style: none
+        text-transform: uppercase
+        width: 100%
+        li
+            width: 100%
+            height: calc( 100% / 10  )
+            text-align: center
+            margin: 10px
+            align-content: center
+            border-bottom: 1px solid black
+            border-top: 1px solid black
+            a
+                color: red
+                text-decoration: none
+            
+        

@@ -1,0 +1,25 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+#root
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-areas: "encabezado""main""footer"
+    grid-template-rows: 140px auto auto
+    row-gap: 10px
+    .conteiner-header
+        grid-area: encabezado
+        position: fixed
+        width: 100%
+        z-index: 100
+    .conteiner-main
+        // margin-top: 160px
+        grid-area: main
+        margin: 10px
+    #detalles
+        grid-area: main
+        margin: 10px 120px
+    .conteiner-footer
+        grid-area: footer    

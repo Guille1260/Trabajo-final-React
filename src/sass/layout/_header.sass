@@ -1,0 +1,75 @@
+@use  '../utilities/mixins'
+.conteiner-header
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: auto 60px auto
+    grid-template-areas: "arriba""medio""bajo"
+
+    .conteiner-ofertas
+        grid-area: arriba
+        text-align: center
+        background: #422976
+        h5
+            color: #ffffff
+        .desplegable-top
+            background: #422976
+            h3
+                color: #ffffff
+            p
+                color: #ffffff
+        .desplegable-top-body
+            display: grid
+            grid-template-columns: 1fr 1fr
+            grid-template-areas: "uno dos"  
+            column-gap: 10px
+            p
+                margin: 10px
+            .conteiner-cuotas
+                grid-area: uno
+                @include mixins.centrar
+            .conteiner-envios
+                grid-area: dos      
+                @include mixins.centrar
+    .conteiner-medio
+        grid-area: medio
+        background: #04042B
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        grid-template-areas: "logo barra card"
+        align-items:  center
+        @media screen and ( min-width:767px)
+            grid-template-columns: 1fr 2fr 1fr
+        @media screen and ( min-width:1023px)
+            grid-template-columns: 1fr 3fr 1fr
+            
+        .conteiner-logo
+            grid-area: logo
+            @include mixins.centrar
+            a
+                img
+                    border-radius: 10px
+                    width: auto
+                    height: 60px
+        .conteiner-buscador
+            grid-area: barra
+            @include mixins.centrar
+            
+        .conteiner-botones-icon
+            grid-area: card
+            display: grid
+            grid-template-areas: "user carrito"
+            column-gap: 10px
+            width: 100%
+            @include mixins.centrar
+            .conteiner-usuario
+                grid-area: user
+                @include mixins.centrar    
+            .conteiner-carrito
+                grid-area: carrito
+                
+    .conteiner-inferior
+        grid-area: bajo
+        background: #422976
+        @include mixins.centrar
+        
+                
